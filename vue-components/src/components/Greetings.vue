@@ -1,5 +1,5 @@
 <template>
-    <h1> {{initial}} -- {{name}} </h1>
+    <h1> {{initial}} : {{name}} </h1>
 </template>
 <script>
 export default {

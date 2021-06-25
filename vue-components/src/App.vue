@@ -3,6 +3,7 @@
   <Greetings name="Sree" initial="First Name"/>
   <Greetings name="Nivas" initial="Middle Name"/>
   <Greetings name="Gattu" initial="Last Name"/>
+  <Greetings :name="name" :initial="initial"/>
 </template>
 
 <script>
@@ -11,6 +12,12 @@ export default {
   name: 'App',
   components: {
     Greetings
+  },
+  data(){
+    return{
+      name : 'JS',
+      initial : "Vue"
+    }
   }
 }
 </script>
