@@ -1,13 +1,17 @@
 <template>
-  <div>
+  <form @submit.prevent="submitProfile">
+    <fieldset>
+    <legend>Form Handling</legend>
+
+    <div>
     <pre>
         {{ JSON.stringify(formValues,null,2) }}
     </pre>
   </div>
-  <form @submit="submitProfile">
+  
       <div>
           <label for="name">Name</label>
-          <input type="text" id="name" v-model="formValues.name"/>
+          <input type="text" id="name" v-model.trim="formValues.name"/>
       </div>
 
       <div>
@@ -77,6 +81,7 @@
       <div>
         <button>Submit </button>
       </div>
+    </fieldset>
   </form>
 </template>
 
@@ -103,8 +108,9 @@ export default {
     increment(){
       this.counter = this.counter + 1;
     },
-    submitProfile(event){
-        event.preventDefault();
+    submitProfile(){
+        /* submit.prevent does this job in HTML
+        event.preventDefault(); */
         console.log(this.formValues);
     }
   }
