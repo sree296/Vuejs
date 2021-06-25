@@ -1,8 +1,9 @@
 <template>
-    <h1>Hello Sreeni </h1>
+    <h1> {{initial}} -- {{name}} </h1>
 </template>
 <script>
 export default {
-    name : 'Greetings'
+    name : 'Greetings',
+    props: ['name', 'initial']
 }
 </script>

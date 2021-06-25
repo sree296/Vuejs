@@ -1,5 +1,8 @@
 <template>
-  <Greetings />
+  <h1>Hello</h1>
+  <Greetings name="Sree" initial="First Name"/>
+  <Greetings name="Nivas" initial="Middle Name"/>
+  <Greetings name="Gattu" initial="Last Name"/>
 </template>
 
 <script>
