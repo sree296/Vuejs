@@ -1,5 +1,5 @@
 <template>
-  <div>This is from App Component :: Username -- {{userName}} </div>
+  <div>This is from App Component :: Username -- {{name}} </div>
   <Component4 />
 </template>
 
@@ -8,12 +8,19 @@ import Component4 from './components/Component4.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      name : 'Sreeni'
+    }
+  },
   components: {
     Component4
   },
-  provide : {
-    userName : 'Sreeni'
-  }
+  provide(){
+    return {
+       userName : this.name
+    }
+  } 
 }
 </script>
 

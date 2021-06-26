@@ -1,5 +1,5 @@
 <template>
-    <h2>This is from Component 5</h2>
+    <h2>This is from Component 5 -- {{userName}} </h2>
 
     <Component6 />
 </template>
@@ -9,6 +9,7 @@ export default{
     name : 'Component5',
     components : {
         Component6
-    }
+    },
+    inject : ['userName']
 }
 </script>
