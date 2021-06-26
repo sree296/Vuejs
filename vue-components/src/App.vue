@@ -6,7 +6,7 @@
   <Greetings :name="name" :initial="initial"/> -->
 
  <!-- :likescount -> : is for passing count as a Number instead of a string , same with Boolean -->
-  <Blog title='Veu JS Docs' :likesCount="90" :isPublished="true"/>
+  <Blog title='Veu JS Docs' :likesCount="90" :isPublished="false"/>
 </template>
 
 <script>
