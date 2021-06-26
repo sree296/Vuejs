@@ -1,4 +1,5 @@
 <template>
+  <div>This is from App Component :: Username -- {{userName}} </div>
   <Component4 />
 </template>
 
@@ -9,6 +10,9 @@ export default {
   name: 'App',
   components: {
     Component4
+  },
+  provide : {
+    userName : 'Sreeni'
   }
 }
 </script>
