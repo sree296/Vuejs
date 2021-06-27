@@ -1,4 +1,5 @@
 <template>
+<h2>Replacement for Data()</h2>
   <h2>Options -- {{o_fname}}</h2>
   <h2>Composition -- {{c_fname}} </h2>
   <h2>Reactive -- {{state.r_fname}} and {{state.r_lname}} Name</h2>
