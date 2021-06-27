@@ -1,14 +1,18 @@
 <template>
+  <HttpPost />
+  <hr />
   <HttpGet />
 </template>
 
 <script>
-import HttpGet from './components/HttpGet.vue'
+import HttpGet from './components/HttpGet.vue';
+import HttpPost from './components/HttpPost.vue';
 
 export default {
   name: 'App',
   components: {
-    HttpGet
+    HttpGet,
+    HttpPost
   }
 }
 </script>
