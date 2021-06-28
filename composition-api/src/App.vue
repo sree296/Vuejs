@@ -1,18 +1,23 @@
 <template>
+<Vmodel />
+<hr />
 <Data />
 <hr />
 <MethodsReplace />
+
 </template>
 
 <script>
 import Data from './components/Data.vue';
-import MethodsReplace from './components/MethodsReplace.vue'
+import MethodsReplace from './components/MethodsReplace.vue';
+import Vmodel from './components/Vmodel.vue';
 
 export default {
   name: 'App',
   components: {
     Data,
-    MethodsReplace
+    MethodsReplace,
+    Vmodel
   }
 }
 </script>
