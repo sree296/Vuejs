@@ -51,14 +51,17 @@ export default {
   },
   methods: {
     registerUser() {
+      this.registerError = false;
       this.saving = true;
       const user = {
-        firstName : this.firstName,
-        lastName : this.lastName,
-        email : this.email
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.email,
+        password: this.password,
       };
-      this.$store.commit('setUser', user)
-      this.$router.push('/products');
+      this.$store.dispatch('registerUser', user)
+        .then(() => this.$router.push('/products'))
+        .catch(() => { this.registerError = true; });
     },
     cancel() {
       this.router.navigate(['/']);
