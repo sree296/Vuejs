@@ -58,6 +58,7 @@ export default {
         email : this.email
       };
       this.$store.commit('setUser', user)
+      this.$router.push('/products');
     },
     cancel() {
       this.router.navigate(['/']);

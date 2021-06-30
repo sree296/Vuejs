@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import filterProducts from './filter-products';
 
 
 export default {
@@ -38,12 +37,12 @@ export default {
   },
   methods: {
     setFilter(filter) {
-      this.filter = filter;
+    this.$store.commit('setProductFilter', filter);
     },
   },
   computed: {
     visibleProducts() {
-      return filterProducts(this.filter, this.$store.state.produts);
+      return this.$store.getters.filteredProducts;
     },
   },
 };
